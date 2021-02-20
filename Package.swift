@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "GoogleMobileAds",
-            targets: ["GoogleMobileAds"]),
+            targets: ["GoogleMobileAdsTarget"]),
     ],
     dependencies: [
         .package(name: "GoogleAppMeasurement",
@@ -23,9 +23,9 @@ let package = Package(
                  from: "1.1.0")
     ],
     targets: [
-        .target(name: "GoogleMobileAds",
+        .target(name: "GoogleMobileAdsTarget",
                 dependencies: [
-                    .target(name: "GoogleMobileAdsBinary"),
+                    .target(name: "GoogleMobileAds"),
                     .product(name: "UserMessagingPlatform", package: "GoogleUserMessagingPlatform-SPM"),
                     .product(name: "GoogleAppMeasurement", package: "GoogleAppMeasurement"),
                 ],
@@ -49,7 +49,7 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]),
         .binaryTarget(
-            name: "GoogleMobileAdsBinary",
+            name: "GoogleMobileAds",
             path: "Sources/GoogleMobileAds.xcframework"),
 //        .binaryTarget(name: "GoogleMobileAdsBinary",
 //                      url: "",
