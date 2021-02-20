@@ -64,15 +64,6 @@ typedef void (^GADAdInspectorCompletionHandler)(NSError *_Nullable error);
 /// request if this method is not called.
 - (void)startWithCompletionHandler:(nullable GADInitializationCompletionHandler)completionHandler;
 
-/// Disables automated in-app purchase (IAP) reporting. IAP reporting is enabled by default but can
-/// be disabled by calling this method before initializing the GMA SDK or loading ads. IAP reporting
-/// is used to track IAP ad conversions. Don't disable reporting if you use IAP ads.
-- (void)disableAutomatedInAppPurchaseReporting;
-
-/// Enables automated in-app purchase (IAP) reporting. IAP reporting is used to track IAP ad
-/// conversions.
-- (void)enableAutomatedInAppPurchaseReporting;
-
 /// Disables automated SDK crash reporting. If not called, the SDK records the original exception
 /// handler if available and registers a new exception handler. The new exception handler only
 /// reports SDK related exceptions and calls the recorded original exception handler.
@@ -93,5 +84,13 @@ typedef void (^GADAdInspectorCompletionHandler)(NSError *_Nullable error);
 - (void)presentAdInspectorFromViewController:(nonnull UIViewController *)viewController
                            completionHandler:
                                (nullable GADAdInspectorCompletionHandler)completionHandler;
+
+#pragma mark Deprecated
+
+/// Deprecated and does nothing. IAP transaction reporting is no longer supported.
+- (void)disableAutomatedInAppPurchaseReporting GAD_DEPRECATED_ATTRIBUTE;
+
+/// Deprecated and does nothing. IAP transaction reporting is no longer supported.
+- (void)enableAutomatedInAppPurchaseReporting GAD_DEPRECATED_ATTRIBUTE;
 
 @end
