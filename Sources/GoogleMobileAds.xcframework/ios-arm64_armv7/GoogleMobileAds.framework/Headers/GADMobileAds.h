@@ -94,22 +94,4 @@ typedef void (^GADAdInspectorCompletionHandler)(NSError *_Nullable error);
                            completionHandler:
                                (nullable GADAdInspectorCompletionHandler)completionHandler;
 
-#pragma mark Deprecated
-
-/// Configures the SDK using the settings associated with the given application ID.
-+ (void)configureWithApplicationID:(nonnull NSString *)applicationID
-    GAD_DEPRECATED_MSG_ATTRIBUTE("Use [GADMobileAds.sharedInstance startWithCompletionHandler:]");
-
-/// Disables automated in-app purchase (IAP) reporting. IAP reporting is enabled by default but can
-/// be disabled by calling this method before initializing the GMA SDK or loading ads. IAP reporting
-/// is used to track IAP ad conversions. Don't disable reporting if you use IAP ads.
-+ (void)disableAutomatedInAppPurchaseReporting GAD_DEPRECATED_MSG_ATTRIBUTE(
-    "Use [GADMobileAds.sharedInstance disableAutomatedInAppPurchaseReporting]");
-
-/// Disables automated SDK crash reporting. If not called, the SDK records the original exception
-/// handler if available and registers a new exception handler. The new exception handler only
-/// reports SDK related exceptions and calls the recorded original exception handler.
-+ (void)disableSDKCrashReporting GAD_DEPRECATED_MSG_ATTRIBUTE(
-    "Use [GADMobileAds.sharedInstance disableSDKCrashReporting]");
-
 @end

@@ -39,14 +39,4 @@
 /// Indicates whether video click to expand behavior is enabled.
 - (BOOL)clickToExpandEnabled;
 
-#pragma mark - Deprecated
-
-/// Returns a Boolean indicating if the receiver has video content.
-- (BOOL)hasVideoContent GAD_DEPRECATED_MSG_ATTRIBUTE(
-    "Use the hasVideoContent property from GADUnifiedNativeAd's mediaContent instead.");
-
-/// Returns the video's aspect ratio (width/height) or 0 if no video is present.
-- (double)aspectRatio GAD_DEPRECATED_MSG_ATTRIBUTE(
-    "Use the aspectRatio property from GADUnifiedNativeAd's mediaContent instead.");
-
 @end

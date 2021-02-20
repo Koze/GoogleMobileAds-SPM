@@ -25,12 +25,4 @@ typedef NS_ENUM(NSInteger, GADNativeAdImageAdLoaderOptionsOrientation) {
 /// Indicates whether multiple images should be loaded for each asset. Defaults to NO.
 @property(nonatomic, assign) BOOL shouldRequestMultipleImages;
 
-#pragma mark - Deprecated
-
-/// Indicates preferred image orientation. Defaults to
-/// GADNativeAdImageAdLoaderOptionsOrientationAny.
-@property(nonatomic, assign)
-    GADNativeAdImageAdLoaderOptionsOrientation preferredImageOrientation DEPRECATED_MSG_ATTRIBUTE(
-        "Use the mediaAspectRatio property from GADNativeAdMediaAdLoaderOptions instead.");
-
 @end
