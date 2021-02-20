@@ -5,24 +5,54 @@ import PackageDescription
 
 let package = Package(
     name: "GoogleMobileAds-SPM",
+    platforms: [
+        .iOS(.v10)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "GoogleMobileAds-SPM",
-            targets: ["GoogleMobileAds-SPM"]),
+            name: "GoogleMobileAds",
+            targets: ["GoogleMobileAds"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(name: "GoogleAppMeasurement",
+                 url: "https://github.com/google/GoogleAppMeasurement.git",
+                 from:  "7.0.0"
+        ),
+        .package(name: "GoogleUserMessagingPlatform-SPM",
+                 url: "https://github.com/Koze/GoogleUserMessagingPlatform-SPM.git",
+                 from: "1.1.0")
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "GoogleMobileAds-SPM",
-            dependencies: []),
-        .testTarget(
-            name: "GoogleMobileAds-SPMTests",
-            dependencies: ["GoogleMobileAds-SPM"]),
+        .target(name: "GoogleMobileAds",
+                dependencies: [
+                    .target(name: "GoogleMobileAdsBinary"),
+                    .product(name: "UserMessagingPlatform", package: "GoogleUserMessagingPlatform-SPM"),
+                    .product(name: "GoogleAppMeasurement", package: "GoogleAppMeasurement"),
+                ],
+                path: "Sources/dummy",
+                linkerSettings: [
+                    .linkedFramework("AudioToolbox"),
+                    .linkedFramework("AVFoundation"),
+                    .linkedFramework("CFNetwork"),
+                    .linkedFramework("CoreGraphics"),
+                    .linkedFramework("CoreMedia"),
+                    .linkedFramework("CoreTelephony"),
+                    .linkedFramework("CoreVideo"),
+                    .linkedFramework("MediaPlayer"),
+                    .linkedFramework("MessageUI"),
+                    .linkedFramework("MobileCoreServices"),
+                    .linkedFramework("QuartzCore"),
+                    .linkedFramework("Security"),
+                    .linkedFramework("StoreKit"),
+                    .linkedFramework("SystemConfiguration"),
+                    .linkedLibrary("z"),
+                    .linkedLibrary("sqlite3")
+                ]),
+        .binaryTarget(
+            name: "GoogleMobileAdsBinary",
+            path: "Sources/GoogleMobileAds.xcframework"),
+//        .binaryTarget(name: "GoogleMobileAdsBinary",
+//                      url: "",
+//                      checksum: "),
     ]
 )
