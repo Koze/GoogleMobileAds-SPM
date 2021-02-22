@@ -15,6 +15,7 @@ Add the following script to `Scheme -> Build -> Post-actions`.
 ```sh
 rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleMobileAds.framework"
 rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/UserMessagingPlatform.framework"
+rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleAppMeasurement.framework"
 ```
 
 ## Official Information
