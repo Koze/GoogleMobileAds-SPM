@@ -29,7 +29,7 @@ let package = Package(
                     .product(name: "UserMessagingPlatform", package: "GoogleUserMessagingPlatform-SPM"),
                     .product(name: "GoogleAppMeasurement", package: "GoogleAppMeasurement"),
                 ],
-                path: "Sources/dummy",
+                path: "Sources",
                 linkerSettings: [
                     .linkedFramework("AudioToolbox"),
                     .linkedFramework("AVFoundation"),
