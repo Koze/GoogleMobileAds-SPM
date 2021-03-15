@@ -5,7 +5,7 @@
 //  Created by Kazuma Koze on 2021/03/09.
 //
 
-// ref. https://github.com/CocoaPods/Specs/blob/de67fc842c1575b51ef1680a12a4d2507ba5eabc/Specs/5/9/a/Google-Mobile-Ads-SDK/8.1.0/Google-Mobile-Ads-SDK.podspec.json#L56-L61
+// ref. https://github.com/CocoaPods/Specs/blob/6c4ab4f0d57f70816f3e2cfb8476c02b8c1a6e76/Specs/5/9/a/Google-Mobile-Ads-SDK/8.2.0/Google-Mobile-Ads-SDK.podspec.json#L56-L61
 
 #if canImport(AdSupport)
 import AdSupport
