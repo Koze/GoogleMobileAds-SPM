@@ -1,8 +1,6 @@
 // swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
- // ref. https://github.com/CocoaPods/Specs/blob/6c4ab4f0d57f70816f3e2cfb8476c02b8c1a6e76/Specs/5/9/a/Google-Mobile-Ads-SDK/8.2.0/Google-Mobile-Ads-SDK.podspec.json
-
 import PackageDescription
 
 let package = Package(
@@ -19,16 +17,13 @@ let package = Package(
         .package(name: "GoogleAppMeasurement",
                  url: "https://github.com/google/GoogleAppMeasurement.git",
                  from:  "7.0.0"
-        ),
-        .package(name: "GoogleUserMessagingPlatform-SPM",
-                 url: "https://github.com/Koze/GoogleUserMessagingPlatform-SPM.git",
-                 from: "1.1.0")
+        )
     ],
     targets: [
         .target(name: "GoogleMobileAdsTarget",
                 dependencies: [
                     .target(name: "GoogleMobileAds"),
-                    .product(name: "UserMessagingPlatform", package: "GoogleUserMessagingPlatform-SPM"),
+                    .target(name: "UserMessagingPlatform"),
                     .product(name: "GoogleAppMeasurement", package: "GoogleAppMeasurement"),
                 ],
                 path: "Sources",
@@ -53,8 +48,8 @@ let package = Package(
         .binaryTarget(
             name: "GoogleMobileAds",
             path: "Binary/GoogleMobileAds.xcframework"),
-//        .binaryTarget(name: "GoogleMobileAdsBinary",
-//                      url: "",
-//                      checksum: "),
+        .binaryTarget(
+            name: "UserMessagingPlatform",
+            path: "Binary/UserMessagingPlatform.xcframework"),
     ]
 )
