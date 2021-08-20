@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
- // ref. https://github.com/CocoaPods/Specs/blob/33bda7254252b811e46cc4dd3a5d3d81201e0391/Specs/5/9/a/Google-Mobile-Ads-SDK/8.8.0/Google-Mobile-Ads-SDK.podspec.json
+ // ref. https://github.com/CocoaPods/Specs/blob/19c82e02326e84a67cbe8dcba7e2c012237fc0c5/Specs/5/9/a/Google-Mobile-Ads-SDK/8.9.0/Google-Mobile-Ads-SDK.podspec.json
 
 import PackageDescription
 
