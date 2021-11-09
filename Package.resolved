@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "48fcea0c0a74fc89131696aa995043eaa971ccb1",
-          "version": "8.0.0"
+          "revision": "9b2f6aca5b4685c45f9f5481f19bee8e7982c538",
+          "version": "8.9.1"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/Koze/GoogleUserMessagingPlatform-SPM.git",
         "state": {
           "branch": null,
-          "revision": "b656b8135aaa471e9716ef01bcc014cda009bd8e",
-          "version": "1.4.0"
+          "revision": "b7f2f97e160d957d6981993397ede9637c2588f3",
+          "version": "2.0.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/google/GoogleUtilities.git",
         "state": {
           "branch": null,
-          "revision": "58359415d4ea29ebdc8fa5b41ce96c434d76d901",
-          "version": "7.4.1"
+          "revision": "797005ad8a1f0614063933e2fa010a5d13cb09d0",
+          "version": "7.6.0"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
           "branch": null,
-          "revision": "afa9a1ace74e116848d4f743599ab83e584ff8cb",
-          "version": "1.2.12"
+          "revision": "611337c330350c9c1823ad6d671e7f936af5ee13",
+          "version": "2.0.0"
         }
       }
     ]

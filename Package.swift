@@ -22,7 +22,7 @@ let package = Package(
         ),
         .package(name: "GoogleUserMessagingPlatform-SPM",
                  url: "https://github.com/Koze/GoogleUserMessagingPlatform-SPM.git",
-                 from: "1.1.0")
+                 "1.1.0"..."2.0.0")
     ],
     targets: [
         .target(name: "GoogleMobileAdsTarget",
