@@ -1,8 +1,7 @@
-# Unofficial Swift Package for Google Mobile Ads SDK
-
-Currently Google doesn't provide Google Mobile Ads SDK as Swift package.
-This repository is alternate for using that as Swift package.
-For security reasons, I hope that Google will officially provide the package.
+# Unofficial Swift Package for Google Mobile Ads SDK (deprecated)
+Google has released an official package.  
+Use the official package instead of this package.  
+https://github.com/googleads/swift-package-manager-google-mobile-ads
 
 ## Required Settings
 
